@@ -46,8 +46,6 @@ db.on('error', (err) => {
 
 
 app.use('/api/books',booksRoutes);
-app.use('/api/books/list1',booksRoutes);
-app.use('/api/reserves',reservesRoutes);
 app.use('/api/users',usersRoutes);
 
 app.get('/', (req, res) => {

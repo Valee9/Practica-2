@@ -33,7 +33,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/users/list2",
+					"raw": "http://localhost:5000/api/books/list2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -41,7 +41,7 @@
 					"port": "5000",
 					"path": [
 						"api",
-						"users",
+						"books",
 						"list2"
 					]
 				}

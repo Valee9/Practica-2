@@ -1,7 +1,7 @@
 const express = require('express');
-const { getBooks } = require('../controllers/books');
+const { getBooksList } = require('../controllers/books');
 const router = express.Router();
 
-router.get('/', getBooks);
+router.get('/list2', getBooksList);
 
 module.exports = router;

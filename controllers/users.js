@@ -1,15 +1,4 @@
 const usersModel = require('../models/user');
-const reservesModel = require('../models/reserve');
-const booksModel = require('../models/book');
-
-const getUsers = async function (req, res) {
-    try {
-        const users = await usersModel.find();
-        res.status(200).send(users)
-    } catch (e) {
-        res.status(404).json({message: e.message });
-    }
-};
 
 const getUserList = async function(req, res) {
     try {
@@ -67,30 +56,4 @@ const getUserList = async function(req, res) {
     }
 };
 
-const getBooksList = async function(req, res) {
-    try {
-      const books = await booksModel.find().lean(); // Obtener todos los libros de la biblioteca
-  
-      // Recorrer cada libro y obtener la lista de usuarios que lo han reservado
-      for (let book of books) {
-        const reserves = await reservesModel.find({ book_id: book.id }).lean(); // Obtener reservas del libro
-        const userIds = reserves.map(reservation => reservation.user_id); // Obtener los IDs de usuario
-  
-        // Obtener los detalles de los usuarios que han reservado el libro
-        const users = await usersModel.find({ id: { $in: userIds } }).lean();
-        const reservedBy = users.map(user => {
-          // Aquí puedes seleccionar los campos que deseas mostrar para cada usuario
-          return { id: user.id, name: user.name, faculty: user.faculty };
-        });
-  
-        // Puedes seleccionar los campos que deseas mostrar para cada libro
-        book.reserves = reservedBy;
-      }
-  
-      res.status(200).json(books);
-    } catch (e) {
-      res.status(500).json({ message: e.message });
-    }
-};
-
-module.exports = { getUsers, getUserList, getBooksList };
+module.exports = { getUserList };

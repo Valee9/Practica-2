@@ -1,12 +1,28 @@
+const usersModel = require('../models/user');
+const reservesModel = require('../models/reserve');
 const booksModel = require('../models/book');
 
-const getBooks = async function (req, res) {
+const getBooksList = async function(req, res) {
     try {
-        const books = await booksModel.find();
-        res.status(200).json(books);
+      const books = await booksModel.find().lean(); 
+
+      for (let book of books) {
+        const reserves = await reservesModel.find({ book_id: book.id }).lean(); 
+        const userIds = reserves.map(reservation => reservation.user_id);
+  
+        const users = await usersModel.find({ id: { $in: userIds } }).lean();
+        const reservedBy = users.map(user => {
+
+          return { id: user.id, name: user.name, faculty: user.faculty };
+        });
+
+        book.reserves = reservedBy;
+      }
+  
+      res.status(200).json(books);
     } catch (e) {
-        res.status(404).json({ message: e.message });
+      res.status(500).json({ message: e.message });
     }
 };
 
-module.exports = { getBooks };
+module.exports = { getBooksList };
