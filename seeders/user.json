@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "code": "001",
+        "name": "Vale",
+        "faculty": "Ingenieria"
+    },
+    {
+        "id": "2",
+        "code": "002",
+        "name": "Gonza",
+        "faculty": "Derecho"
+    },
+    {
+        "id": "3",
+        "code": "003",
+        "name": "Lala",
+        "faculty": "Diseño"
+    },
+    {
+        "id": "4",
+        "code": "004",
+        "name": "Michael",
+        "faculty": "Ciencias"
+      },
+      {
+        "id": "5",
+        "code": "005",
+        "name": "Emilia",
+        "faculty": "Artes"
+      }
+]

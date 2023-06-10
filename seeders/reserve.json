@@ -1,0 +1,48 @@
+[
+    {
+      "user_id": "1",
+      "book_id": "1",
+      "reserved_at": "2023-03-23 13:30"
+    },
+    {
+      "user_id": "1",
+      "book_id": "2",
+      "reserved_at": "2023-03-25 14:30"
+
+    },
+    {
+      "user_id": "2",
+      "book_id": "1",
+      "reserved_at": "2023-06-01 11:30"
+    },
+    {
+      "user_id": "3",
+      "book_id": "1",
+      "reserved_at": "2023-06-01 11:30"
+    },
+    {
+      "user_id": "3",
+      "book_id": "3",
+      "reserved_at": "2023-06-02 11:30"
+    },
+    {
+      "user_id": "3",
+      "book_id": "4",
+      "reserved_at": "2023-05-03 11:30"
+    },
+    {
+      "user_id": "4",
+      "book_id": "5",
+      "reserved_at": "2023-05-02 10:00"
+    },
+    {
+      "user_id": "4",
+      "book_id": "6",
+      "reserved_at": "2023-05-02 10:00"
+    },
+    {
+      "user_id": "5",
+      "book_id": "6",
+      "reserved_at": "2023-06-02 10:00"
+    }
+]

@@ -1,0 +1,39 @@
+[
+    {
+      "id": "1",
+      "code": "001",
+      "book": "El gran Gatsby",
+      "description": "Una novela clásica ambientada en la década de 1920."
+    },
+    {
+      "id": "2",
+      "code": "002",
+      "book": "1984",
+      "description": "Una novela distópica que presenta una sociedad totalitaria."
+    },
+    {
+      "id": "3",
+      "code": "003",
+      "book": "Cien años de soledad",
+      "description": "Una novela épica que narra la historia de la familia Buendía."
+    },
+    {
+      "id": "4",
+      "code": "004",
+      "book": "Don Quijote de la Mancha",
+      "description": "Una obra maestra de la literatura escrita por Miguel de Cervantes"
+    },
+    {
+      "id": "5",
+      "code": "005",
+      "book": "El amor en los tiempos del cólera",
+      "description": "Una novela romántica de Gabriel García Márquez"
+    },
+    {
+      "id": "6",
+      "code": "006",
+      "book": "Rayuela",
+      "description": "Una obra innovadora del escritor argentino Julio Cortázar"
+    }
+]
+  
