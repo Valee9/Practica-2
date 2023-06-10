@@ -69,7 +69,7 @@ const getUserList = async function(req, res) {
 
 const getBooksList = async function(req, res) {
     try {
-      const books = await booksModel.find({}, { _id: 0, id: 0, code: 0 }).lean(); // Obtener todos los libros de la biblioteca
+      const books = await booksModel.find().lean(); // Obtener todos los libros de la biblioteca
   
       // Recorrer cada libro y obtener la lista de usuarios que lo han reservado
       for (let book of books) {
